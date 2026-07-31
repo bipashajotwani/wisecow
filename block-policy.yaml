@@ -1,0 +1,12 @@
+apiVersion: security.kubearmor.com/v1
+kind: KubeArmorPolicy
+metadata:
+  name: block-shell
+spec:
+  selector:
+    matchLabels:
+      run: test
+  process:
+    matchPaths:
+    - path: /bin/sh
+  action: Block
