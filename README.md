@@ -26,3 +26,41 @@ Deploy the wisecow application as a k8s app
 1. Github repo containing the app with corresponding dockerfile, k8s manifest, any other artifacts needed.
 2. Github repo with corresponding github action.
 3. Github repo should be kept private and the access should be enabled for following github IDs: nyrahul
+
+---
+
+# Implementation Completed
+
+## Kubernetes Deployment
+
+The Wisecow application was containerized and deployed on Kubernetes.
+
+Implemented:
+- Created Dockerfile for Wisecow application
+- Created Kubernetes deployment manifest
+- Exposed application using Kubernetes Service
+- Configured Minikube Kubernetes environment
+
+## KubeArmor Security Policy
+
+Implemented KubeArmor security monitoring.
+
+Steps completed:
+- Installed KubeArmor using Helm
+- Created security policy to restrict shell execution
+- Applied KubeArmorPolicy on Kubernetes workload
+- Verified policy deployment
+
+## Security Policy Files
+
+- `block-policy.yaml` - KubeArmor process security policy
+- `policy.yaml` - Kubernetes security configuration
+
+## Verification
+
+Commands used:
+
+```bash
+kubectl get pods
+kubectl get ksp
+kubectl get ksp block-shell -o yaml
