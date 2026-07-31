@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: wisecow
-        image: wisecow-app
+        image: bipasha16/wisecow-app:latest
         imagePullPolicy: Never
         ports:
         - containerPort: 4499
